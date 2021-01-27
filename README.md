@@ -1,2 +1,2 @@
 # ranges
-A small library that implements ranges
+A small java library that implements ranges
