@@ -1,0 +1,38 @@
+apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.2'
+    }
+}
+
+publish {
+    userOrg = 'romanqed'
+    groupId = 'com.github.romanqed'
+    artifactId = 'ranges'
+    publishVersion = '0.0.1'
+    desc = 'A small library that implements ranges.'
+    website = 'https://github.com/RomanQed/ranges'
+    licences = ['MIT']
+}
+
+group 'com.github.romanqed'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
