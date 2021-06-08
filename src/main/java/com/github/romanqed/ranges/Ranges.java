@@ -6,10 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 public class Ranges {
-    public static CycledRange invertRange(Rangeable range) {
-        return new CycledRange(range.getLeft(), range.getRight(), range.getStep() * -1);
-    }
-
     public static List<Integer> toList(Rangeable range) {
         return Arrays.asList(range.toArray());
     }

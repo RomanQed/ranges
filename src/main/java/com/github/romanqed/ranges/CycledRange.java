@@ -1,18 +1,8 @@
 package com.github.romanqed.ranges;
 
 public class CycledRange extends AbstractRange {
-    private final boolean isInverted;
-
     public CycledRange(int left, int right, int step) {
         super(left, right, step);
-        boolean leftMoreRight = left > right && step > 0;
-        isInverted = leftMoreRight || (left < right && step < 0);
-        if (isInverted) {
-            this.step *= -1;
-            this.left = left + this.step * (size() - 1);
-            this.right = leftMoreRight ? left + 1 : left % step - 1;
-            this.step *= -1;
-        }
     }
 
     public CycledRange(int left, int right) {
@@ -27,10 +17,6 @@ public class CycledRange extends AbstractRange {
         int size = Math.abs(right - left) + 1;
         int ret = value - (value / size) * size;
         return ret >= 0 ? ret : size + ret;
-    }
-
-    public boolean isInverted() {
-        return isInverted;
     }
 
     @Override
