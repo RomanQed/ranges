@@ -1,4 +1,4 @@
-# Ranges [ ![Download](https://api.bintray.com/packages/romanqed/maven/ranges/images/download.svg?version=0.0.1) ](https://bintray.com/romanqed/maven/ranges/_latestVersion)
+# Ranges
 A small java library that implements ranges
 
 ## Samples
