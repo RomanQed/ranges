@@ -7,11 +7,6 @@ A small java library that implements ranges
 Range range = new Range(1, 101, 6);
 range.forEach(System.out::println);
 ```
-##### "Переворот" множества
-```Java
-Rangeable range = Ranges.invertRange(new Range(1, 5, -2));
-range.forEach(System.out::println);
-```
 
 ##### Сумма множества
 ```Java
